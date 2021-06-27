@@ -1,6 +1,10 @@
-// .team {
-//   display: flex;
-// }
+.team {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 
 .team__item {
   border-radius: 0 0 4px 4px;
@@ -8,23 +12,37 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--primary-white-color);
 
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
+
   &:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .team-section {
-  // padding-top: 94px;
-  // padding-bottom: 94px;
-
   background-color: var(--section-background-color);
 }
 
 .team__card {
-  padding: 30px 32px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }
 
 .team__name-title {
+  margin-top: 30px;
   margin-bottom: 10px;
 
   color: var(--title-text-color);
