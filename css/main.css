@@ -651,6 +651,7 @@ ul {
 
 .mobile-menu__social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mobile-menu__social-item {
@@ -887,6 +888,7 @@ ul {
 
 .team__img {
   display: block;
+  width: 100%;
 }
 
 .team__job-description {
