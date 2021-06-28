@@ -1,7 +1,10 @@
 .header {
-  padding-top: 10px;
-  padding-bottom: 10px;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
   &__container {
     display: flex;
@@ -10,8 +13,10 @@
   }
 
   &__nav {
-    // display: flex;
-    // align-items: center;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -20,8 +25,10 @@
     display: none;
   }
 
-  // display: flex;
-  //   align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contacts {
@@ -29,8 +36,15 @@
     display: none;
   }
 
-  // display: flex;
-  //   margin-left: auto;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .nav-list__item {
@@ -40,8 +54,15 @@
 }
 
 .contacts__item {
-  &:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -85,8 +106,6 @@
 .contacts__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   color: var(--primary-text-color);
 
@@ -96,6 +115,11 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   &:hover,
   &:focus {
@@ -126,10 +150,6 @@
 }
 
 .logo {
-  //   padding-top: 24px;
-  //   padding-bottom: 25px;
-  //   margin-right: 93px;
-
   color: var(--accent-color);
 
   font-family: 'Raleway', sans-serif;
@@ -138,7 +158,12 @@
   line-height: 1.17;
   text-decoration: none;
 
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
   @media screen and (min-width: 1200px) {
+    margin-right: 93px;
     font-size: 26px;
     line-height: 1.19;
   }
