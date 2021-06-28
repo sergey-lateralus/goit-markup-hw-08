@@ -1261,6 +1261,7 @@ ul {
 
 .projects-img {
   display: block;
+  width: 100%;
 }
 
 .overlay {
